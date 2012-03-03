@@ -1,44 +1,89 @@
-<!doctype html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>Tech-Wise</title>
-   <meta name="description" content="">
-   <meta name="author" content="">
- </head>
- <body>
-    <h1>Javascript Coercion : Why and How???</h1>
-<pre>Being new to javascript, I found coercion and all about javascript being loosely typed quite confusing. I'll try to make things clear on how coercion works in javascript using examples.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>Tech-Wise</title>
+		<style type="text/css" media="all">@import "css/master.css";</style>  
+</head>
 
-Case 1: Type of x is the same as type of y
-NaN (Not a Number) is not equal to NaN. So NaN==NaN returns false
-null is  equal to null. null==null returns true
-Similarly undefined is equal to undefined and undefined==undefined returns true
-When x is the same number as y, 4==4 returns true. (as expected)
-+0 and -0 are also equal. +0==-0 returns true
-For strings, True is returned only when both the strings are exactly the same. (as expected)
-Boolean - Returns true when both x and y are either true or false. (as expected)
+<body>
 
+<div id = "main-container">
 
-Case 2: x is null and y is undefined. null is equal to undefined and null==undefined returns true. So remember that "if (a==undefined) || (a==null)" is the same as "if (a==null)".
+<div id = "header">
+<h1>Tech-Wise</h1>
+</div>
 
-Case 3: x is number and y is string. In this case, javascript will actually perform x==ToNumber(y). Hence 9=='9' returns true.
-
-Case 4:  x is boolean and y is a number. Here comparing (0,false) and (1,true) will only return true, as expected.
-
-Case 5: x is boolean and y is string. Javascript performs x=ToNumber(y). So again (false,'0') and (true.'1') will only return true.
-
-Hope you find this helpful. Please do provide your inputs to improve this material further.
-
-Thanks and Happy Learning ! :-)</pre>
-	 
-</br>	 
-	<ul>
+<div id = "top-navigation">
+<ul>
 	<li id="home"><a href="index.html" class="button">Home</a></li>
-	<li id="posts"><a href="posts.html" class="button">Posts</a></li>
 	<li id="aboutMe"><a href="aboutMe.html" class="button">About Me</a></li>
+	<li id="blogs"><a href="blogs.html" class="button">My Blogs</a></li>
 </ul>
-	 
+</div>
+
+<div id = "content">
+    <h2>Javascript Coercion : Why and How???</h2>
+
+<div dir="ltr" style="text-align: left;" trbidi="on">
+Being new to javascript, I found coercion and all about javascript being loosely typed quite confusing. I'll try to make things clear on how coercion works in javascript using examples.<br />
+<br />
+Case 1: Type of <b>x</b>&nbsp;is the same as type of <b>y</b><br />
+<div style="text-align: left;">
+</div>
+<ul style="text-align: left;">
+<li>NaN (Not a Number) is not equal to NaN. So NaN==NaN returns false</li>
+<li>null is &nbsp;equal to null. null==null returns true</li>
+<li>Similarly undefined is equal to undefined and undefined==undefined returns true</li>
+<li>When x is the same number as y, 4==4 returns true. (as expected)</li>
+<li>+0 and -0 are also equal. +0==-0 returns true</li>
+<li>For strings, True is returned only when both the strings are exactly the same. (as expected)</li>
+<li>Boolean - Returns true when both x and y are either true or false. (as expected)</li>
+</ul>
+<br /><br />
+<div style="text-align: left;">
+Case 2: x is null and y is undefined. null is equal to undefined and null==undefined returns true. So remember that "if (a==undefined) || (a==null)" is the same as "if (a==null)".</div>
+<div style="text-align: left;">
+<br /></div>
+<div style="text-align: left;">
+Case 3: x is number and y is string. In this case, javascript will actually perform x==ToNumber(y). Hence 9=='9' returns true.</div>
+<div style="text-align: left;">
+<br /></div>
+<div style="text-align: left;">
+Case 4: &nbsp;x is boolean and y is a number. Here comparing (0,false) and (1,true) will only return true, as expected.</div>
+<div style="text-align: left;">
+<br /></div>
+<div style="text-align: left;">
+Case 5: x is boolean and y is string. Javascript performs x=ToNumber(y). So again&nbsp;(false,'0') and (true.'1') will only return true.</div>
+<div style="text-align: left;">
+<br /></div>
+<div style="text-align: left;">
+Hope you find this helpful. Please do provide your inputs to improve this material further.</div>
+<div style="text-align: left;">
+<br /></div>
+<div style="text-align: left;">
+Thanks and Happy Learning ! :-)</div>
+<div style="text-align: left;">
+<br /></div>
+</div>	
+	
+	
+	
+	
+</div> 
+<div id = "footer">
+<div id="footnav">
+	<a href="index.html" class="">Home</a> -
+	<a href="blogs.html" class="">My Blogs</a> - 
+	<a href="aboutMe.html" class="">About Me</a>
+</div>
+Copyright - <a href="http://abhishekbahuguna.blogspot.in/" target=_blank>Abhishek Bahuguna</a>
+</div>
+
+</div>
+
+</body>
+</html>
  </body>
  </html>
-

@@ -1,81 +1,335 @@
-<!doctype html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>Tech-Wise</title>
-   <meta name="description" content="">
-   <meta name="author" content="">
- </head>
- <body>
-    <h1>GIT on Linux – The 15 minute guide to getting started</h1>
-<pre>Hi All,
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>Tech-Wise</title>
+		<style type="text/css" media="all">@import "css/master.css";</style>  
+</head>
 
-Here's a step by step guide to getting started with GIT for Linux. We will go through the steps to set up GIT, create a repository and finally to push code into the repository.
+<body>
 
-Download and install GIT from http://git-scm.com/download. Once installed, you can use the git –version command on the terminal to confirm and check the version.
+<div id = "main-container">
 
-Create a Git account at https://github.com/
+<div id = "header">
+<h1>Tech-Wise</h1>
+</div>
 
-Create SSH keys by following the steps mentioned below
-Check for existing keys using command cd ~/.ssh
-Backup existing keys by creating a new directory and copying the existing ids there
-mkdir backup
-cp id_rsa* backup
-rm id_rsa*
-Generate new SSH key
-ssh-keygen -t rsa -C “username@email.com”
-Here username@email.com will be your email address. Hit enter to save the key at the default location.
-Next it asks for a passphrase where you can enter it or keep it blank.
-You should get a notification saying 'Your public key has been saved in...'
-Add the SSH key to your github account.
-Go to 'Account settings' > 'SSH Keys' on your github account.
-Open the 'id_rsa.pub' file that you just generated with a text editor.
-Copy the complete contents of the file and past it into the 'Key' field.
-Click 'Add Key'
-Configure your global username and email
-            git config –global user.name “Firstname Lastname”
-            git config –global user.email “username@email.com”
-Create a new repository
-           Create a new repository from https://github.com/repositories/new. I'll name my repository 'gittest'.
-  VI. Adding files to the repository
-Create a folder with the same name as that of the repository you just created.
-    mkdir gittest
-Go to the gittest dir
-    cd gittest
-Initialize GIT using 'git init'
-Create a file
-    echo “This is a README file” > README.txt
-Include the file to be tracked by GIT
-    git add .
-'git status' shows you the status. At this point, it should be saying something like “Changes to be committed: ...”
-Committing the changes
-    git commit -m “Any message you like”
-Running 'git status' now should say “Nothing to commit”
-Linking your application directory to the repository on Github
-    git remote add origin git@github.com:your-github-username/gittest.git
-Confirm that the directory is now linked to the repository on Github by running 'git remote -v'. Terminal will display the remotes linked to this directory.
-Pushing to Github
-    git push -u origin master
- 
-This completes the steps to push your code to Github. To push any further changes you make, you would need to follow the steps mentioned below.
-git add .
-git commit -m “your message”
-git push
-
-You can also replace the commands 1 & 2 with 'git commit -am “your message”'. This will add as well as commit the changes you have done.
-
-
-Hope novice users like me find this helpful. Do let me know your feedback to improve the content.
-
-Happy Learning !</pre>
-	 
-</br>	 
-	<ul>
+<div id = "top-navigation">
+<ul>
 	<li id="home"><a href="index.html" class="button">Home</a></li>
-	<li id="posts"><a href="posts.html" class="button">Posts</a></li>
 	<li id="aboutMe"><a href="aboutMe.html" class="button">About Me</a></li>
+	<li id="blogs"><a href="blogs.html" class="button">My Blogs</a></li>
 </ul>
-	 
+</div>
+
+<div id = "content">
+    <h2>GIT on Linux - The 15 minute guide to getting started</h2>
+	
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<div>
+
+
+
+ 
+ 
+ 
+ <style type="text/css">
+ <!--
+  @page { margin: 0.79in }
+  P { margin-bottom: 0.08in }
+  A:link { so-language: zxx }
+ -->
+ 
+</style>
+
+
+<div style="font-weight: normal; margin-bottom: 0in;">
+Hi All,</div>
+<div style="font-weight: normal; margin-bottom: 0in;">
+<br />
+</div>
+<div style="font-weight: normal; margin-bottom: 0in;">
+Here's a step by
+step guide to getting started with GIT for Linux. We will go through
+the steps to set up GIT, create a repository and finally to push code
+into the repository.</div>
+<ol style="text-align: left;" type="I">
+<li><div style="margin-bottom: 0in;">
+<b>Download and install GIT</b><span style="font-weight: normal;">
+ from <a class = "pagelinks" href="http://git-scm.com/download">http://git-scm.com/download</a>.
+ Once installed, you can use the </span><i><span style="font-weight: normal;">git
+ -version</span></i><span style="font-weight: normal;"> command on
+ the terminal to confirm and check the version.</span></div>
+<div style="margin-bottom: 0in;">
+<br /></div>
+</li>
+<li><div style="margin-bottom: 0in;">
+<b>Create a Git account</b><span style="font-weight: normal;">
+ at <a class = "pagelinks" href="https://github.com/">https://github.com/</a></span></div>
+<div style="margin-bottom: 0in;">
+<br /></div>
+</li>
+<li><div style="margin-bottom: 0in;">
+<b>Create SSH keys</b><span style="font-weight: normal;">
+ by following the steps mentioned below</span></div>
+<ol>
+<li><div style="margin-bottom: 0in;">
+<span style="font-weight: normal;">Check
+  for existing keys using command </span><i><span style="font-weight: normal;">cd
+  ~/.ssh</span></i></div>
+</li>
+<li><div style="font-style: normal; margin-bottom: 0in;">
+<span style="font-weight: normal;">Backup
+  existing keys by creating a new directory and copying the existing
+  ids there</span></div>
+<ol><div style="margin-bottom: 0in;">
+<i><span style="font-weight: normal;">mkdir
+   backup</span></i></div>
+<div style="margin-bottom: 0in;">
+<i><span style="font-weight: normal;">cp
+   id_rsa* backup</span></i></div>
+<div style="margin-bottom: 0in;">
+<i><span style="font-weight: normal;">rm
+   id_rsa*</span></i></div>
+</ol>
+</li>
+<li><div style="margin-bottom: 0in;">
+<span style="font-style: normal;"><span style="font-weight: normal;">Generate
+  new SSH key</span></span></div>
+<ul>
+<li><i><span style="font-weight: normal;">ssh-keygen
+    -t rsa -C "<a class = "pagelinks" href="mailto:username@email.com">username@email.com</a>"</span></i></li>
+<li><span style="font-style: normal;"><span style="font-weight: normal;">Here
+    <a class = "pagelinks" href="mailto:username@email.com">username@email.com</a> will
+    be your email address. Hit enter to save the key at the default
+    location. </span></span>
+    </li>
+<li><span style="font-style: normal;"><span style="font-weight: normal;">Next
+    it asks for a passphrase where you can enter it or keep it blank.</span></span></li>
+<li><span style="font-style: normal;"><span style="font-weight: normal;">You
+    should get a notification saying </span></span><i><span style="font-weight: normal;">'Your
+    public key has been saved in...'</span></i></li>
+</ul>
+</li>
+<li><div style="font-style: normal; font-weight: normal; margin-bottom: 0in;">
+
+  Add the SSH key to your github account.</div>
+<ul>
+<li>
+    Go to 'Account settings' &gt; 'SSH Keys' on your github account.</li>
+<li>
+    Open the 'id_rsa.pub' file that you just generated with a text
+    editor.</li>
+<li>
+    Copy the complete contents of the file and past it into the 'Key'
+    field.</li>
+<li>
+    Click 'Add Key'</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<div style="font-style: normal; font-weight: normal; margin-bottom: 0in;">
+
+
+</div>
+<ol start="4" style="text-align: left;" type="I">
+<li><div style="font-style: normal; font-weight: normal; margin-bottom: 0in;">
+
+  <b>Configure your global username and email</b></div>
+<style type="text/css">
+ <!--
+  @page { margin: 0.79in }
+  P { margin-bottom: 0.08in }
+  A:link { so-language: zxx }
+ -->
+</style><span style="font-style: normal;"><span style="font-weight: normal;"></span></span><i><span style="font-weight: normal;"></span></i><i><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git config -global
+user.name "Firstname Lastname"</span></i><br /><i><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git config -global
+user.email "<a class = "pagelinks" href="mailto:username@email.com">username@email.com</a>"</span></i>
+
+
+</li>
+</ol>
+<ol start="5" style="text-align: left;" type="I">
+<li><div style="font-style: normal; font-weight: normal; margin-bottom: 0in;">
+
+ <b>Create a new repository</b></div>
+<b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</b>
+
+
+ 
+ 
+ 
+ <style type="text/css">
+ <!--
+  @page { margin: 0.79in }
+  P { margin-bottom: 0.08in }
+  A:link { so-language: zxx }
+ -->
+</style><span style="font-style: normal;"><span style="font-weight: normal;">Create
+a new repository from <a class = "pagelinks" href="https://github.com/repositories/new">https://github.com/repositories/new</a>.
+I'll name my repository 'gittest'.</span></span><br />
+
+
+<div style="font-style: normal; font-weight: normal; margin-bottom: 0in;">
+<b> </b></div>
+</li>
+</ol>
+<div style="font-style: normal; font-weight: normal; margin-bottom: 0in;">
+<b>&nbsp;
+
+
+ 
+ 
+ 
+ </b><style type="text/css">
+ <!--
+  @page { margin: 0.79in }
+  P { margin-bottom: 0.08in }
+  A:link { so-language: zxx }
+ -->
+</style>VI.<b></b>
+
+
+ 
+ 
+ 
+ <style type="text/css">
+ <!--
+  @page { margin: 0.79in }
+  P { margin-bottom: 0.08in }
+  A:link { so-language: zxx }
+ -->
+</style><b>Adding files</b> to the repository</div>
+<ul style="margin-left: 80px; text-align: left;">
+<li>
+    Create a folder with the same name as that of the repository you
+    just created.</li>
+<div style="font-weight: normal; margin-bottom: 0in;">
+<i>&nbsp;&nbsp;&nbsp; mkdir
+     gittest</i></div>
+<li>
+    Go to the gittest dir</li>
+<div style="font-weight: normal; margin-bottom: 0in;">
+<i>&nbsp;&nbsp;&nbsp; cd gittest</i></div>
+<li><span style="font-style: normal;">Initialize
+    GIT using </span><i>'git init'</i></li>
+<li>
+    Create a file</li>
+<div style="margin-bottom: 0in;">
+<i><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp; echo
+     "This is a README file" &gt; README.txt</span></i></div>
+<li><span style="font-weight: normal;">Include
+    the file to be tracked by GIT</span></li>
+<div style="margin-bottom: 0in;">
+<i><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp; git
+     add .</span></i></div>
+<li><i><span style="font-weight: normal;">'git
+    status' </span></i><span style="font-style: normal;"><span style="font-weight: normal;">shows
+    you the status. At this point, it should be saying something like
+    "</span></span><i><span style="font-weight: normal;">Changes to
+    be committed: ...</span></i><span style="font-style: normal;"><span style="font-weight: normal;">"</span></span></li>
+<li><span style="font-style: normal;"><span style="font-weight: normal;">Committing
+    the changes</span></span></li>
+<div style="margin-bottom: 0in;">
+<i><span style="font-weight: normal;">&nbsp;&nbsp;&nbsp; git
+     commit -m "Any message you like"</span></i></div>
+<li><span style="font-style: normal;"><span style="font-weight: normal;">Running
+    </span></span><i><span style="font-weight: normal;">'git status'
+    </span></i><span style="font-style: normal;"><span style="font-weight: normal;">now
+    should say </span></span><i><span style="font-weight: normal;">"Nothing
+    to commit"</span></i></li>
+<li><span style="font-weight: normal;">Linking
+    your application directory to the repository on Github</span></li>
+<div style="font-weight: normal; margin-bottom: 0in;">
+<i>&nbsp;&nbsp;&nbsp; git remote
+     add origin <a class = "pagelinks" href="mailto:git@github.com">git@github.com</a>:your-github-username/gittest.git</i></div>
+<li>
+    Confirm that the directory is now linked to the repository on
+    Github by running '<i>git remote -v</i>'. Terminal will display
+    the remotes linked to this directory.</li>
+<li>
+
+
+ 
+ 
+ 
+ <style type="text/css">
+ <!--
+  @page { margin: 0.79in }
+  P { margin-bottom: 0.08in }
+ -->
+</style><span style="font-weight: normal;">Pushing
+to Github</span>
+<div style="font-style: normal; margin-bottom: 0in;">
+<span style="font-weight: normal;">&nbsp;&nbsp;&nbsp; <i>git
+push -u origin master</i></span></div>
+</li>
+</ul>
+</div>
+<div>
+<div style="margin-bottom: 0in;">
+&nbsp; </div>
+<div style="margin-bottom: 0in;">
+<i><span style="font-weight: normal;"> </span></i><span style="font-style: normal;"><span style="font-weight: normal;">This
+completes the steps to push your code to Github. To push any further
+changes you make, you would need to follow the steps mentioned below.</span></span></div>
+<div style="margin-bottom: 0in;">
+<span style="font-style: normal;"><span style="font-weight: normal;">  </span></span></div>
+<ul style="margin-left: 80px; text-align: left;">
+<li><i><span style="font-weight: normal;">git
+ add .</span></i></li>
+<li><i><span style="font-weight: normal;">git
+ commit -m "your message"</span></i></li>
+<li><i><span style="font-weight: normal;">git
+ push</span></i></li>
+</ul>
+<div style="margin-bottom: 0in;">
+<br />
+</div>
+<div style="font-style: normal; margin-bottom: 0in;">
+<span style="font-weight: normal;"> You
+can also replace the commands 1 &amp; 2 with '</span><i><span style="font-weight: normal;">git
+commit -am "your message"</span></i><span style="font-weight: normal;">'.
+This will add as well as commit the changes you have done.</span></div>
+<div style="font-style: normal; margin-bottom: 0in;">
+<br />
+</div>
+<div style="font-style: normal; margin-bottom: 0in;">
+<br />
+</div>
+<div style="font-style: normal; margin-bottom: 0in;">
+<span style="font-weight: normal;">Hope
+novice users like me find this helpful. Do let me know your feedback
+to improve the content.</span></div>
+<div style="font-style: normal; margin-bottom: 0in;">
+<br />
+</div>
+<div style="font-style: normal; margin-bottom: 0in;">
+<span style="font-weight: normal;">Happy
+Learning !</span></div>
+<div style="font-style: normal; font-weight: normal; margin-bottom: 0in;">
+<br /><br /><br /><br /><br /></div>
+</div>
+</div>	
+	
+	
+	
+</div> 
+<div id = "footer">
+<div id="footnav">
+	<a href="index.html" class="">Home</a> -
+	<a href="blogs.html" class="">My Blogs</a> - 
+	<a href="aboutMe.html" class="">About Me</a>
+</div>
+Copyright - <a href="http://abhishekbahuguna.blogspot.in/" target=_blank>Abhishek Bahuguna</a>
+</div>
+
+</div>
+
+</body>
+</html>
  </body>
  </html>
-
