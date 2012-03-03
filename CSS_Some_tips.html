@@ -1,0 +1,43 @@
+<!doctype html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Tech-Wise</title>
+   <meta name="description" content="">
+   <meta name="author" content="">
+ </head>
+ <body>
+    <h1>CSS - Some tips for beginners</h1>
+<pre>Even though being a developer since long, I had never actually worked on CSS apart for making small tweaks in the design. Google was my friend and provided me CSS titbits as and when I required them.
+Recently I started with CSS and there were a few things that I found that I thought would be helpful for newbies like me.
+
+1) Inline vs External stylesheet
+It is always preferred to use an external stylesheet as it clearly separates the structure of the web page with the presentation of the page. This way it is very easy even to change the complete presentation of the page without changing anything in the structure.
+Inline CSS makes it hard to implement any layout changes as it increases the complexity and should be used sparingly.
+
+
+2) Class vs ID
+Initially I found it hard to understand when to use Class and when to go for IDs. Here's my understanding.
+As the literal meaning of the words suggest, ID is something which is unique to a element. Whereas class would be a collection of such different elements.
+As per this, IDs should be used for elements that are not repeated in the page and Class should be used for elements that are repeated. Your webpage cannot have more than one elements having the same id. Whereas the same Class can be used with multiple elements and same class can have multiple classes too.
+
+
+3) Table vs Div
+Tables should be limited to only display tabular data and should not be used for structuring web pages. Reason being that in the long run, tables become much more complex to maintain as the data increases. The complexity also increases when there are nested tables. Using DIVs keeps the size of the page small, less complex and faster to load. The code looks much cleaner compared to a page using tables.
+
+
+4) Px vs Em
+Px is a a fixed pixel size which is a unit for screens. Whereas EM is relative and changes with font size. It is good to use Px when the size of the webpage is fixed and definite. Wheres its better to use Ems on pages where the scalability is needed. In Ems, the fonts increase and decrease along with the design to ensure that the text does not spill over the elements.
+
+Hope you find this helpful. Any comments or suggestions are welcome ! :-)</pre>
+	 
+</br>	 
+	<ul>
+	<li id="home"><a href="index.html" class="button">Home</a></li>
+	<li id="posts"><a href="posts.html" class="button">Posts</a></li>
+	<li id="aboutMe"><a href="aboutMe.html" class="button">About Me</a></li>
+</ul>
+	 
+ </body>
+ </html>
+

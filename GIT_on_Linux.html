@@ -1,0 +1,81 @@
+<!doctype html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Tech-Wise</title>
+   <meta name="description" content="">
+   <meta name="author" content="">
+ </head>
+ <body>
+    <h1>GIT on Linux – The 15 minute guide to getting started</h1>
+<pre>Hi All,
+
+Here's a step by step guide to getting started with GIT for Linux. We will go through the steps to set up GIT, create a repository and finally to push code into the repository.
+
+Download and install GIT from http://git-scm.com/download. Once installed, you can use the git –version command on the terminal to confirm and check the version.
+
+Create a Git account at https://github.com/
+
+Create SSH keys by following the steps mentioned below
+Check for existing keys using command cd ~/.ssh
+Backup existing keys by creating a new directory and copying the existing ids there
+mkdir backup
+cp id_rsa* backup
+rm id_rsa*
+Generate new SSH key
+ssh-keygen -t rsa -C “username@email.com”
+Here username@email.com will be your email address. Hit enter to save the key at the default location.
+Next it asks for a passphrase where you can enter it or keep it blank.
+You should get a notification saying 'Your public key has been saved in...'
+Add the SSH key to your github account.
+Go to 'Account settings' > 'SSH Keys' on your github account.
+Open the 'id_rsa.pub' file that you just generated with a text editor.
+Copy the complete contents of the file and past it into the 'Key' field.
+Click 'Add Key'
+Configure your global username and email
+            git config –global user.name “Firstname Lastname”
+            git config –global user.email “username@email.com”
+Create a new repository
+           Create a new repository from https://github.com/repositories/new. I'll name my repository 'gittest'.
+  VI. Adding files to the repository
+Create a folder with the same name as that of the repository you just created.
+    mkdir gittest
+Go to the gittest dir
+    cd gittest
+Initialize GIT using 'git init'
+Create a file
+    echo “This is a README file” > README.txt
+Include the file to be tracked by GIT
+    git add .
+'git status' shows you the status. At this point, it should be saying something like “Changes to be committed: ...”
+Committing the changes
+    git commit -m “Any message you like”
+Running 'git status' now should say “Nothing to commit”
+Linking your application directory to the repository on Github
+    git remote add origin git@github.com:your-github-username/gittest.git
+Confirm that the directory is now linked to the repository on Github by running 'git remote -v'. Terminal will display the remotes linked to this directory.
+Pushing to Github
+    git push -u origin master
+ 
+This completes the steps to push your code to Github. To push any further changes you make, you would need to follow the steps mentioned below.
+git add .
+git commit -m “your message”
+git push
+
+You can also replace the commands 1 & 2 with 'git commit -am “your message”'. This will add as well as commit the changes you have done.
+
+
+Hope novice users like me find this helpful. Do let me know your feedback to improve the content.
+
+Happy Learning !</pre>
+	 
+</br>	 
+	<ul>
+	<li id="home"><a href="index.html" class="button">Home</a></li>
+	<li id="posts"><a href="posts.html" class="button">Posts</a></li>
+	<li id="aboutMe"><a href="aboutMe.html" class="button">About Me</a></li>
+</ul>
+	 
+ </body>
+ </html>
+
