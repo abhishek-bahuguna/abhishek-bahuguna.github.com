@@ -5,6 +5,21 @@
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 	<title>Tech-Wise</title>
 		<style type="text/css" media="all">@import "css/master.css";</style>  
+		<script src="jquery.min.js"></script>
+		<script src="jquery.cross-slide.min.js"></script>	
+<script>
+ $(function() {
+    $('#slideshow').crossSlide({
+      sleep: 2,
+      fade: 1
+    }, [
+      { src: 'images/blog5.jpg' },
+      { src: 'images/blog3.jpg' },
+      { src: 'images/blog4.jpg' },
+	  { src: 'images/blog1.jpg' }
+    ])
+  });
+</script>		
 </head>
 
 <body>
@@ -12,7 +27,7 @@
 <div id = "main-container">
 
 <div id = "header">
-<h1>Tech-Wise</h1>
+<h1><span class="big">T</span>ech-<span class="big">W</span>ise</h1>
 </div>
 
 <div id = "top-navigation">
@@ -21,9 +36,16 @@
 	<li id="aboutMe"><a href="aboutMe.html" class="button">About Me</a></li>
 	<li id="blogs"><a href="blogs.html" class="button">My Blogs</a></li>
 </ul>
+<div id="search">
+     <input type="text" id="glabel" name="search" id = "search" style-align="right"/>
+     <input type="button" id="gsearch" onclick="search()" value="Search" style-align="right">
+     </div>
 </div>
 
 <div id = "content">
+</br>
+<div id="slideshow"></div>
+</br>
      <h2>My blog posts:</h2>
 <ul id="bloglinks">
 	<li><a href="My_First_date.html" class="">My 'First date' with CLI</a></li>
@@ -31,6 +53,7 @@
 	<li><a href="CSS_Some_tips.html" class="">CSS - Some tips for beginners</a></li>
 	<li><a href="Javascript_Coercion.html" class="">Javascript Coercion : Why and How???</a></li>
 </ul> 
+</br>
 </br>	
 </div> 
 <div id = "footer">
